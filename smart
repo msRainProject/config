@@ -1,0 +1,128 @@
+# > 深巷有喵的「Surge_EN」配置
+# > 日期：2025-11-23
+# > 版本：3.7.7
+# > 配置作者：https://github.com/Rabbit-Spec/Surge
+# > 适用版本：iOS/macOS的Surge 5
+
+[General]
+# > 日志级别
+loglevel = notify
+show-error-page-for-reject = true
+# > 允许Wi-Fi访问
+allow-wifi-access = false
+# > All Hybrid 网络并发
+all-hybrid = false
+# > IPv6 支持（默认关闭）
+ipv6 = false
+# > IPv6 VIF（默认禁用）
+ipv6-vif = disabled
+# > 测试超时（秒）
+test-timeout = 2
+# > Internet 测试 URL
+internet-test-url = http://www.baidu.com
+# > 代理测速 URL
+proxy-test-url = http://connectivitycheck.gstatic.com/generate_204
+# > GeoIP数据库
+geoip-maxmind-url = https://github.com/Hackl0us/GeoIP2-CN/raw/release/Country.mmdb
+# > 排除简单主机名
+exclude-simple-hostnames = true
+# > DNS 服务器
+dns-server = system
+hijack-dns = 8.8.8.8:53, 8.8.4.4:53
+# > 从 /etc/hosts 读取 DNS 记录
+read-etc-hosts = true
+# > 远程控制器
+http-api-web-dashboard = true
+# > 当前连接的 Wi-Fi 不是 Surge 配置中指定的「主 Wi-Fi」，则使用默认策略
+use-default-policy-if-wifi-not-primary = false
+# > 跳过代理
+skip-proxy = 192.168.0.0/24, 10.0.0.0/8, 172.16.0.0/12, 127.0.0.1, localhost, *.local
+# > Always Real IP
+always-real-ip = *.srv.nintendo.net, *.stun.playstation.net, xbox.*.microsoft.com, *.xboxlive.com, *.battlenet.com.cn, *.battlenet.com, *.blzstatic.cn, *.battle.net
+# > 兼容模式(若需要使用Homekit摄像头，可以开启兼容模式，但开启兼容模式会导致一些屏蔽广告的模块失效，请自行取舍)
+# compatibility-mode = 5
+# > 禁用 GEOIP 自动更新
+disable-geoip-db-auto-update = true
+# > UDP退回行为
+udp-policy-not-supported-behaviour = REJECT
+
+[Proxy]
+# >>> BEGIN GENERATED PROXIES
+# <<< END GENERATED PROXIES
+[Proxy Group]
+Proxy = select, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, ✈️ 我的节点, icon-url=https://raw.githubusercontent.com/Irrucky/Tool/main/Surge/icon/surge_2.png
+Apple = select, DIRECT, Proxy, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, icon-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Apple_Arcade.png
+Intelligence = select, Proxy, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, icon-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/ChatGPT7.png
+Telegram = select, Proxy, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, icon-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Productivity.png
+Netflix = select, Proxy, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, icon-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png
+Disney+ = select, Proxy, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, icon-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Disney.png
+YouTube = select, Proxy, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, icon-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/YouTube_01.png
+Spotify = select, Proxy, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, icon-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Spotify_01.png
+TikTok = select, Proxy, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, icon-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Tiktok_10.png
+BiliBili = select, DIRECT, 🇭🇰 香港节点,🇺🇸 美国节点, 🇯🇵 日本节点, icon-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/bilibili.png
+GlobalMedia = select, Proxy, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, icon-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/HKMTMedia.png
+Microsoft = select, DIRECT, Proxy, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, icon-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Windows_11.png
+Gamer = select, DIRECT, Proxy, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, icon-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
+
+# > 外部节点
+🇭🇰 香港节点 = smart, include-other-group=✈️ 我的节点, update-interval=0, no-alert=0, hidden=1, include-all-proxies=0, policy-regex-filter=(🇭🇰)|(香港)|(Hong)|(HK)|(HKG), icon-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png
+
+🇺🇸 美国节点 = smart, include-other-group=✈️ 我的节点, update-interval=0, no-alert=0, hidden=1, include-all-proxies=0, policy-regex-filter=(🇺🇸)|(美国)|(States)|(US)|(LAX), icon-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/United_States.png
+
+🇯🇵 日本节点 = smart, include-other-group=✈️ 我的节点, update-interval=0, no-alert=0, hidden=1, include-all-proxies=0, policy-regex-filter=(🇯🇵)|(日本)|(Japan)|(JP)|(TY)|(TYO), icon-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Japan.png
+
+#🇨🇳 台湾节点 = smart, include-other-group=✈️ 我的节点, update-interval=0, no-alert=0, hidden=1, include-all-proxies=0, policy-regex-filter=(🇨🇳)|(台湾)|(Tai)|(TW), icon-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/China.png
+
+#🇰🇷 韩国节点 = smart, include-other-group=✈️ 我的节点, update-interval=0, no-alert=0, hidden=1, include-all-proxies=0, policy-regex-filter=(🇰🇷)|(韩国)|(Korea)|(KR), icon-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/South_Korea.png
+
+#🇸🇬 新加坡节点 = smart, include-other-group=✈️ 我的节点, update-interval=0, no-alert=0, hidden=1, include-all-proxies=0, policy-regex-filter=(🇸🇬)|(新加坡)|(Singapore)|(SG), icon-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Singapore.png
+
+✈️ 我的节点 = select,<<这里是节点名字>>, update-interval=0, no-alert=0, hidden=0, include-all-proxies=0, icon-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Final.png
+
+[Rule]
+# > 广告拦截
+RULE-SET,https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/refs/heads/main/Filters/AWAvenue-Ads-Rule-Surge-RULE-SET.list,REJECT,extended-matching
+# > 智能助理
+RULE-SET,https://raw.githubusercontent.com/EAlyce/conf/refs/heads/main/Rule/OpenAI.list,Intelligence
+# > 苹果服务
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Apple/Apple_All_No_Resolve.list,Apple
+# > GitHub
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GitHub/GitHub.list,Proxy,no-resolve
+# > 微软服务
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Microsoft/Microsoft.list,Microsoft
+# > 社交平台
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Telegram/Telegram.list,Telegram
+# > 游戏平台
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Epic/Epic.list,Gamer
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Sony/Sony.list,Gamer
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Steam/Steam.list,Gamer
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Nintendo/Nintendo.list,Gamer
+# > 流媒体
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/YouTube/YouTube.list,YouTube
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Netflix/Netflix.list,Netflix
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Disney/Disney.list,Disney+
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Spotify/Spotify.list,Spotify
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/TikTok/TikTok.list,TikTok
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/BiliBili/BiliBili.list,BiliBili
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/ChinaMedia/ChinaMedia.list,DIRECT
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GlobalMedia/GlobalMedia_All_No_Resolve.list,GlobalMedia
+# > Proxy
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Proxy/Proxy_All_No_Resolve.list,Proxy,extended-matching
+# > China
+RULE-SET,https://ruleset.skk.moe/List/ip/domestic.conf,DIRECT
+RULE-SET,https://ruleset.skk.moe/List/ip/china_ip.conf,DIRECT
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/ChinaMax/ChinaMax_All.list,DIRECT,extended-matching
+# > 局域网地址
+RULE-SET,LAN,DIRECT
+# > DNS 查询失败走Final规则
+FINAL,Proxy,dns-failed
+
+[SSID Setting]
+SSID:Xiaomi_0B74_5G suspend=true
+SSID:fr suspend=true
+
+[MITM]
+skip-server-cert-verify = true
+h2 = true
+ca-passphrase = 47EE415F
+ca-p12 = MIIKPAIBAzCCCgYGCSqGSIb3DQEHAaCCCfcEggnzMIIJ7zCCBF8GCSqGSIb3DQEHBqCCBFAwggRMAgEAMIIERQYJKoZIhvcNAQcBMBwGCiqGSIb3DQEMAQYwDgQIH215srhNjNgCAggAgIIEGOCYbrzoiZxvJdRHUWf8+Jih/GI0wZt9ThjNM3WuNa00dhHdrqDWhq/IA90AqxVeElxfx7MTZ7C5QshXHgu5A8jWKLLGfmhz5JT+IUFVYKenWjl5GxO6Uvim7h/hYxA81BbBmSbeak35lA0DfZj6UrZv+uGKaPfT2ipurPMXZ8GPNMkgC7ROtrWqh2bZ0Cs0MhK6kxhjbnX0fuPpYvuAKe/igY/nexwuk9pRgTr+U0iDJIDyfFBgYaCVojE3JtkLYWqCKGlSr8abFy6tNP2QlwJeQwXrZFAU06jH3fkLsB/dL3gpzg6PXODgIlSeYfoAeH0DPvDlBc+Yc9KmpgxbAhqvNPRFcIG8Xw55CbBgONwhP/WVRdMl/oQRTJlV/pXg6rg437xRoOqpMaKivuZtcrG5vPZfX014Z/tsj7/rvD9FfEiIvV5HSZLUWBsg1wBndhf0Ea/1kJyFzyWqo+cCK2b2LY1+8QiJL2y9TuTOxXqdYxhuQCwab/qTQgaAPqrXeZKsNrF1HrCkHf1WAx/MgekGkmmxmie5XpF3ZESR0TYFJTspPeLIL8KjSBjVlLanZi1qqrNPin/ZO5EFaVxBZjqBWXypmarQ6RhRkwR6aYf7rWdcrPjfyvanoBBBj0tuJnLOBT9tMNnP7Xi01SbJtRb3Cc42sE6Z3k4Tr50OYFNsMMKh68O2AY68oXsi8kS57YUgBfqHL+um/lB6vdLrrW+6gVzaIB368LH43ca4ZnlbqEkcUwJY23sh80XMAA/ITSM3Rv3WxU71dgN9Vx+SlmsO+V2bLM6k7WEFBcVwyGZu2j+pjLQlr6mwpO0fQieGnkbTTj/Pd2ruClkkZogjn8R6d/idHrxZj3fwl6ESIOyFParR7v5ny8WSxVgorbFYI0WkY/qfLmEW/LKWKlXdSpkcPSNRmonaxt8p1VQZDjbEgAX83ogd35GoBlEPl6IDS5WUCihUdcJGioznHAIycmI00s9dqtgfHz3xsINCRGhOG9lnv5py7sEdegcXEKpc0uF+pEYJn2m5Md/70IpB9Rcn6hoebyG/zqZmqwsDRKTOToziPgMetAfXCzb0H0+ioU3c9xD/WKqmWsCjshGi8n01l6RC5RX2wfUEX4Ywx69j6Xhu9jcSVupSsYMnHaOvbmfgZsn527FPSkFCtPecywnV8IzyCGHi6QxAb6/LoMUXZyqTkn+okfmDIPNnNXs2R5DCUf6CozFEA/gjZoBPFmenrMowhAVw9w0irWQwmlo/Hcvm4Gr2Xuay3AIWukDw+xC4+pMcCMzl1INeVc2fu1m/PQNP+c5ZwK4lkLSCo36UHKbY1T/rUlGh8WpOMc5tls8nhQAU+/Rw5lwmnBsb49Z/peSNZtd8uzCqkuPdmTqoqV8NKyQqs7YwggWIBgkqhkiG9w0BBwGgggV5BIIFdTCCBXEwggVtBgsqhkiG9w0BDAoBAqCCBO4wggTqMBwGCiqGSIb3DQEMAQMwDgQIZLmWH+6iuqECAggABIIEyC/vySYmJZhCGa57ZoJNyhqDsrOZoND3qzXi1jWdq9kCxMkkk2Fa2d+PruSrKgSRkUY136l1VzaquDnEESQ5Ba+DQ2oQ3pp3Kj0VSCbj5c4WUYlkjcqpZH/ab0VSmPQhvgkAyV8EBEAFQo5+ceGSN5je4ctXrb1F6ShghVP6PzpLKXiP0dZfvx1bxtX+KvScx9J2u3kcqiENdlQHvm6s5q6a7/xhPcnWxv9WMG/mlJeevKuz5Z+OrXegNV8ph+aLpJnmKDd0jPGYI0CMwRHkMRmwcBOpj77FWzvS1lIm87BHo7h/jViEVr9wR0ZbCJepll2nVENXuh6EQ5WDiXs5BDUj+LHYcYqmwnczhC/8/PNJ6pEE5Vcrf2f3/EBFV3GfDgYH9Msm+LvmkRS8codW3/SSCyV8RhbT8RADj1MadaE74z/etIQKDHoB8SWLE0kg3hxrrPVho1Sm83D+qt23vDlYsHp9jL+yMheNdUaXEWPldGfWXaQHyPTHLzkMZiLfZw1hWOxHR2pE7nRdNck57cPZOql18S0vLTdd/uV9i+/zDoXmkozuK74kuc8qHtUX6QaawkBep9RvjLnvCDg7JGq/BuZAI2M/kuADntixXRn2d/JU2tkY6gDkD2hQQvg6xDTwBzAM0zccs2i6ln4gkYzlNNXzRnacScFwBSunmOSIENS3wTEKXWg3i0Sbv1CkP3iFJQXO7u5mWTt3kv/s5f3gHpKblfcxmN9nT4eXNFlmPvMd+aMMor3uppi6RQYpRfNVxsg/La6HXklC54/dlmPkdNLgQtAmPjbwCz9h8Wat+SrRK+OPdiXBZNPATiIMZrpKnnVEc13IDkL2N/IStW1O65A1p0Vz70A+r9If31TESM35ZspsJk59LMFcWoRFiMcXTZjhBuhAO3WBEC88/fNGbpLjdUr0MNnopf1F5F8m0GLAI4tA9TRy+ekrceLn0Bf8sVal0H69FOoiU1H4x3fnxFw08O7bFYMPBrMWOg/gtOdscQjeuRxJ6autX1UF5YnsTbrbSoUQqbsDqbrIIX8X4Ei6vxsoeMi+jq5kr2H+4+8YcHTzENrqj9T2NlpsDsu9ztMpWjaYjWg17fSohEVn00Do0gauKn/iO+RYDpSK9GbUdoVWfsiHdcK2K6V5f76Vb9xM2t6IkOYL/vjJTlDd0ODTmqvAy4RKI0fatBwQWq2mx5venWptRtkzp3a/WdSSkosuutrap093nAWQ1ZwY7M6qZebwRmDVe0WSntvO/eK7YPqVxWgnRQ8wvBAvgY6NiYeeA5Zdowt25HPNyCNxTC9tEhjLzBSi5T9EV9viucKtLQerb5D4IXxKNFUy3J7WUKUKpnzL4HKUEHyxeQtvFEXEksTrGg34pdswHImi1950GXACwYfe9UMfdTd4wNUP3XIfBjZtKhU7f5NzIm6L5NWnRrGQ7ZASYpXqyaBgBnQaG449Vg91htPOW/gDHOYAAAAHKfqVf8IOM+G+MKhrjpwzTwVMUEo/NGFU+aYxHHKoxdALUcwzR5pLdADfL3oEljBzMPyGE4SSswJPIrS2RHakT4q6iEVTu51dsG+t34ZTIAbL87ljPThsVy2nfJxkGIbTOVWHxhqcYP4rUr4pHdBE8bTiKTFsMCMGCSqGSIb3DQEJFTEWBBTCBHfEiZcgStJOwYUKmXzxqB4FdjBFBgkqhkiG9w0BCRQxOB42AFMAdQByAGcAZQAgAEcAZQBuAGUAcgBhAHQAZQBkACAAQwBBACAANAA3AEUARQA0ADEANQBGMC0wITAJBgUrDgMCGgUABBRQNtHwWNt+aYxU/k7UMLgRg0N1swQIw7YcKzP7y8E=
