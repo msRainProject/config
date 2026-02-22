@@ -1,3 +1,6 @@
+# =====================================
+# General - 基础设置
+# =====================================
 ipv6: false
 vif_only: true
 hide_vpn_icon: false
@@ -10,6 +13,9 @@ vif_excluded_routes:
 - 172.16.0.0/12
 - 10.0.0.0/8
 - 192.168.0.0/16
+# =====================================
+# DNS - 域名解析设置
+# =====================================
 dns:
   bootstrap:
   - 8.8.8.8
@@ -73,7 +79,14 @@ dns:
       value: Global
       disabled: false
   public_ip_lookup_url: https://ifconfig.me/ip
+# =====================================
+# Policy Groups - 策略组
+# 应用策略组：用户可见，手动选择地区
+# 地区策略组：手自一体 fallback，自动测速 + 手动选择
+# 国内应用策略组：直连
+# =====================================
 policy_groups:
+# --- 外部订阅源 ---
 - external:
     name: Proxy
     type: select
@@ -83,6 +96,7 @@ policy_groups:
     update_interval: 7200
     icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/02ProxySoftLogo/Egern.png
     hidden: false
+# --- 应用策略组 (select) ---
 - select:
     name: Telegram
     policies:
@@ -239,6 +253,7 @@ policy_groups:
     flatten: false
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_1.png
     hidden: false
+# --- 地区策略组 (fallback 手自一体) ---
 - fallback:
     name: Hong Kong
     policies:
@@ -275,6 +290,7 @@ policy_groups:
     interval: 20
     icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png
     hidden: true
+# --- 自动测速策略组 (auto_test) ---
 - auto_test:
     name: HK Auto
     policies:
@@ -314,6 +330,7 @@ policy_groups:
     tolerance: 50
     icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png
     hidden: true
+# --- 手动选择策略组 (select) ---
 - select:
     name: HK Select
     policies:
@@ -345,6 +362,7 @@ policy_groups:
     flatten: true
     icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png
     hidden: true
+# --- 国内应用策略组 (DIRECT 直连) ---
 - select:
     name: WeChat
     policies:
@@ -429,6 +447,7 @@ policy_groups:
     flatten: false
     icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/yidong(1).png
     hidden: true
+# --- 广告拦截策略组 ---
 - select:
     name: Adblock
     policies:
@@ -436,6 +455,10 @@ policy_groups:
     flatten: false
     icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Adblock.png
     hidden: true
+# =====================================
+# Rules - 分流规则
+# 匹配域名/规则集到对应策略组
+# =====================================
 rules:
 - rule_set:
     name: apple_update
@@ -543,7 +566,7 @@ rules:
     policy: Twitter
     disabled: false
 - rule_set:
-    name: 微博
+    name:  微博
     match: https://github.com/blackmatrix7/ios_rule_script/raw/master/rule/Loon/Weibo/Weibo.list
     policy: DIRECT
     disabled: false
@@ -639,9 +662,15 @@ rules:
 - default:
     name: 漏网之鱼
     policy: Global
+# =====================================
+# MITM
+# =====================================
 mitm:
   ca_p12: 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
   ca_passphrase: egern
+# =====================================
+# Modules - 外部模块
+# =====================================
 modules:
 - url: https://raw.githubusercontent.com/BOBOLAOSHIV587/Rules/refs/heads/main/Surge/Premium/Premium.sgmodule
   enabled: true
