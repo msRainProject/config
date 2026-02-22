@@ -478,10 +478,6 @@ rules:
     policy: Adblock
     disabled: false
 - rule_set:
-    match: emby
-    policy: Emby
-    disabled: false
-- rule_set:
     match: https://raw.githubusercontent.com/mushanrain/rules/refs/heads/main/1.list
     policy: Emby
     disabled: false
