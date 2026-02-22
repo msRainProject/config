@@ -109,7 +109,6 @@ mitm:
 # =====================================
 # Modules - 外部模块
 # =====================================
-modules:
 - url: http://script.hub/file/_start_/https://kelee.one/Tool/Loon/Lpx/QQ_Redirect.lpx/_end_/QQ_Redirect.sgmodule?type=surge-module&target=surge-module&del=true&jqEnabled=true
   enabled: true
 - url: http://script.hub/file/_start_/https://kelee.one/Tool/Loon/Lpx/DiDi_remove_ads.lpx/_end_/DiDi_remove_ads.sgmodule?type=surge-module&target=surge-module&del=true&jqEnabled=true
@@ -122,12 +121,9 @@ modules:
   enabled: true
 - url: https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/%E5%BE%AE%E4%BF%A1%E5%A4%96%E9%83%A8%E9%93%BE%E6%8E%A5%E8%A7%A3%E9%94%81.sgmodule
   enabled: true
-- url: http://script.hub/file/_start_/https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/plugin/HTTPDNS.Block.plugin/_end_/HTTPDNS.sgmodule?type=surge-module&target=surge-module&del=true&jqEnabled=true
-  enabled: true
 - url: https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/Beta/HTTPDNS%E6%8B%A6%E6%88%AA%E5%99%A8.beta.sgmodule
   enabled: true
 - url: http://script.hub/file/_start_/https://raw.githubusercontent.com/Tartarus2014/Loon-Script/refs/heads/master/Plugin/skip-proxy.lpx/_end_/skip-proxy.sgmodule?type=surge-module&target=surge-module&del=true&jqEnabled=true
   enabled: true
 - url: https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/modules/script-hub.surge.sgmodule
   enabled: true
-
