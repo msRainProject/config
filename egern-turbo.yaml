@@ -109,6 +109,7 @@ mitm:
 # =====================================
 # Modules - 外部模块
 # =====================================
+modules:
 - url: http://script.hub/file/_start_/https://kelee.one/Tool/Loon/Lpx/QQ_Redirect.lpx/_end_/QQ_Redirect.sgmodule?type=surge-module&target=surge-module&del=true&jqEnabled=true
   enabled: true
 - url: http://script.hub/file/_start_/https://kelee.one/Tool/Loon/Lpx/DiDi_remove_ads.lpx/_end_/DiDi_remove_ads.sgmodule?type=surge-module&target=surge-module&del=true&jqEnabled=true
