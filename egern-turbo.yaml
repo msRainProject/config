@@ -20,7 +20,38 @@ dns:
   bootstrap:
   - 223.5.5.5
   - 119.29.29.29
-  - 8.8.8.8
+  upstreams:
+    Domestic-DNS:
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+    Foreign-DNS:
+    - https://cloudflare-dns.com/dns-query
+    - https://dns.google/dns-query
+  forward:
+  - proxy_rule_set:
+      match: https://rule.kelee.one/Loon/ChinaMax.lsr
+      value: Domestic-DNS
+      disabled: false
+  - proxy_rule_set:
+      match: https://ruleset.skk.moe/List/non_ip/apple_cn.conf
+      value: Domestic-DNS
+      disabled: false
+  - proxy_rule_set:
+      match: https://ruleset.skk.moe/List/non_ip/apple_services.conf
+      value: Domestic-DNS
+      disabled: false
+  - proxy_rule_set:
+      match: https://ruleset.skk.moe/List/non_ip/apple_cdn.conf
+      value: Domestic-DNS
+      disabled: false
+  - proxy_rule_set:
+      match: https://ruleset.skk.moe/List/domainset/apple_cdn.conf
+      value: Domestic-DNS
+      disabled: false
+  - domain_wildcard:
+      match: '*'
+      value: Foreign-DNS
+      disabled: false
 # =====================================
 # Policy Groups - 策略组
 # 精简版：仅保留 Proxy + Ai
