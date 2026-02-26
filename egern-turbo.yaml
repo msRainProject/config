@@ -61,7 +61,7 @@ policy_groups:
     type: select
     urls:
     - ${proxy_backend_addr}
-    filter: ^(?!.*(重置|试用|过期|Date|GB|Day|到期|维护|失效|演示|官方|免费|流量|剩余|已用|跑路|待补|补货|停用|禁售|禁用|故障|测速|备用|应急|落地|回程|中继|Relay|Tunnel|游戏|专线|待续|Construction|Expired|Free|Trial|Test|Demo|Maintain|Outage|Sold.?Out|Closed)).*(?!^$)
+    filter: .*
     update_interval: 7200
     icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Urltest.png
     hidden: false
@@ -70,7 +70,7 @@ policy_groups:
     policies:
     - Proxy
     flatten: true
-    filter: ^(?!.*(香港|HK|HongKong|Hong Kong|HKBN|HGC|HKIX|🇭🇰|港|穗|深港|京港|🇲🇴|澳门|MACAU|MO|DEBA))
+    filter: ^(?!.*(HK|MACAU|DEBA))
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png
     hidden: false
 - select:
@@ -78,7 +78,7 @@ policy_groups:
     policies:
     - Proxy
     flatten: true
-    filter: 美国|US|United States|USA|美|洛杉矶|圣何塞|达拉斯|芝加州|纽约|西雅图|弗吉尼亚|亚特兰大|芝加哥|凤凰城|波特兰|LAX|SJC|SEA|IAD|DFW|ATL|PHX|🇺🇸
+    filter: US|PHX
     icon: https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Spotify_01.png
     hidden: false
 - select:
@@ -88,9 +88,8 @@ policy_groups:
     - DIRECT
     flatten: true
     filter: .*
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/HKMTMedia.png
+    icon: https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Gallery/Color/StreamingSE.png
     hidden: false
-    prev_hop: Proxy
 # =====================================
 # Rules - 分流规则
 # =====================================
@@ -109,7 +108,7 @@ rules:
 - rule_set:
     name: Spotify
     match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Spotify/Spotify.list
-    policy: Spotify
+    policy: Proxy
     disabled: false
 - rule_set:
     name: douyin
@@ -119,6 +118,11 @@ rules:
 - rule_set:
     name: rednote
     match: https://github.com/fmz200/wool_scripts/raw/main/Loon/rule/RedBook.list
+    policy: DIRECT
+    disabled: false
+- rule_set:
+    name: Wechat
+    match: https://github.com/blackmatrix7/ios_rule_script/raw/master/rule/Loon/WeChat/WeChat.list
     policy: DIRECT
     disabled: false
 - rule_set:
