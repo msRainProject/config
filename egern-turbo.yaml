@@ -52,7 +52,7 @@ dns:
       match: '*'
       value: Global
       disabled: false
-    proxy_nameservers:
+  proxy_nameservers:
   - https://dns.alidns.com/dns-query
 # =====================================
 # Policy Groups - 策略组
