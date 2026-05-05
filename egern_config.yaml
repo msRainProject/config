@@ -79,6 +79,8 @@ dns:
       value: Global
       disabled: false
   public_ip_lookup_url: https://ifconfig.me/ip
+  proxy_nameservers:
+  - https://dns.alidns.com/dns-query
 # =====================================
 # Policy Groups - 策略组
 # 应用策略组：用户可见，手动选择地区
